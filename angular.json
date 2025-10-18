@@ -62,7 +62,8 @@
               "buildTarget": "V18Tutorial:build:production"
             },
             "development": {
-              "buildTarget": "V18Tutorial:build:development"
+              "buildTarget": "V18Tutorial:build:development",
+            "port": 4203
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,30 @@
+<p>data-binding works!</p>
+<p> one way from .ts to .html </p>
+<div class="row">
+    <div class="col-4">
+<p>1. Using Interpolation</p>
+    </div>
+    
+     <div class="col-4">
+        {{courseName}} <br/>
+        {{rollNumber}} <br/>
+        {{isIndian}} <br/>
+        {{currentDate}} <br/>
+    </div>
+     <div class="col-4">
+        <input type="text" [value]="courseName">
+    </div>
+ <div class="col-4">
+        <button (click)="showAlert('Welcome to Angular 18 Tutorial')">Show Message</button>
+    </div>
+    <div class="col-4">
+      <select [(ngModel)]="stateName">
+        <option value="Maharashtra"> Maharashtra</option>
+        <option value="Goa">Goa</option>
+        <option value="Punjab">Punjab</option>
+      </select>
+    </div>
+    <div class="col-4">
+      <h2>{{firstName()}}</h2>
+    </div>
+</div>

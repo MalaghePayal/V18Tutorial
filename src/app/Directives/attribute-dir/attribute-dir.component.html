@@ -1,0 +1,56 @@
+
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>Attribute Directive</h1>
+    <p>[ngClass],[ngStyle]</p>
+</div>
+<div class="row mt-2">
+<div class="col-3 text-center">
+    <div class="p-3 text-center" [ngClass]="div1BgColor">
+        <h4>Div-1</h4>
+    </div>
+</div>
+<div class="col-3 text-center">
+    <div class=" p-3 text-center" [ngClass]="div2BgColor">
+        <h4>Div-2</h4>
+    </div>
+</div>
+<div class="col-3 text-center">
+    <div class=" p-3 text-center" [ngClass]="num1 == num2 ?'bg-secondary text-white':'bg-danger text-primary'">
+        <h4>Div-3</h4>
+    </div>
+</div>
+<div class="col-3 text-center">
+    <div class="p-3 text-center" [ngClass]="ischecked?'bg-success':'bg-danger'">
+        <h4>Div-4</h4>
+    </div>
+</div>
+<div class="col-3 text-center">
+    <div class="p-3 text-center" [ngClass]="stateSelected=='Goa'?'bg-success':'bg-danger'">
+        <h4>Div-5</h4>
+    </div>
+</div>
+</div>
+<div class="row mt-3">
+    <div class="col-3">
+        <button class="btn button bg-danger" (click)="addRedClass()">Add Red</button>
+        <button class="btn button bg-primary" (click)="addBlueClass()">Add Blue</button>
+    </div>
+    <div class="col-3">
+        <button class="btn button bg-success" (click)="toggleclass()">Toggle</button>
+       
+    </div>
+     <div class="col-3">
+        <input  type="text" placeholder="Num-1"  [(ngModel)]="num1" >
+         <input type="text" placeholder="Num-2" [(ngModel)]="num2"> 
+    </div>
+      <div class="col-3">
+        <input type="checkbox" [(ngModel)]="ischecked">
+        <select [(ngModel)]="stateSelected">
+            <option>Select State</option>
+            <option value="MH">Maharashtra</option>
+    <option value="Goa">Goa</option>
+      <option value="PJ">Punjab</option>
+    <option value="MP">MadhyaPradesh</option>
+        </select>
+      </div>
+</div>
