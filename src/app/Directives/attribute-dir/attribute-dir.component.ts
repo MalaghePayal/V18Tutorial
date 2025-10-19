@@ -19,6 +19,25 @@ num2:string='';
 ischecked:boolean=true;
 
 stateSelected:string='';
+customStyle:any= {
+  'background-color':'blue',
+  'fontWeight':'bold',
+  'fontSize':'20px',
+  'height':'200px',
+  'width':'200px',
+  'color':'white',
+  'border-radius':'50%'
+}
+
+studentList:any[]=[
+  {studId:1,name:'Payal',totalmarks:23,city:'Pune',gender:'Female',isActive:true},
+  {studId:3,name:'Rita',totalmarks:33,city:'Rajgurunagar',gender:'Female',isActive:true},
+  {studId:4,name:'Akshata',totalmarks:67,city:'Chakan',gender:'Female',isActive:true},
+  {studId:2,name:'Pooja',totalmarks:50,city:'Katraj',gender:'male',isActive:false},
+
+]
+
+
 addRedClass(){
   this.div1BgColor='bg-danger'
 }
@@ -36,5 +55,7 @@ toggleclass()
     this.div2BgColor='bg-success';
   }
 }
+
+
 
 }

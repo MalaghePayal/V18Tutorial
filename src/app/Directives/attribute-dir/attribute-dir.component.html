@@ -48,9 +48,51 @@
         <select [(ngModel)]="stateSelected">
             <option>Select State</option>
             <option value="MH">Maharashtra</option>
-    <option value="Goa">Goa</option>
+    <option value="Goa" >Goa</option>
       <option value="PJ">Punjab</option>
     <option value="MP">MadhyaPradesh</option>
         </select>
       </div>
+</div>
+
+<div class="row pt-4">
+    <div class="col-5">
+<table class="table table-bordered">
+<thead>
+    <tr>
+    <th>studentId</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>City</th>
+    <th>Status</th>
+    <th>Total Marks</th>
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor="let stud of studentList">
+    <td>{{stud.studId}}</td>
+    <td>{{stud.name}}</td>
+    <td>{{stud.gender}}</td>
+    <td>{{stud.city}}</td>
+    <td [ngStyle]="{'background-color':stud.isActive?'green':'red','font-weight':stud.isActive?'bold':'normal'}">
+        <span> {{stud.isActive?'Active':'De-Active'}}</span>
+        </td>
+        <td>
+            <div class="progress">
+                <div class="progress-bar" [ngStyle]="{'width': stud.totalmarks +'%'}">{{stud.totalmarks}}</div>
+            </div>
+            </td>
+</tr>
+</tbody>
+ 
+</table>
+    </div>
+
+
+</div>
+
+<div class="row pt-4">
+    <div class="col-5">
+        <div [ngStyle]="customStyle">Div Custom</div>
+    </div>
 </div>
